@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Eşitlik İçin</title>
+    <style>
+     .accordion-button {
+        font-size: 30px; /* Yazı boyutunu değiştirme */
+        background-color: #7A4EA6; /* Arka plan rengini değiştirme */
+        color: white;
+      }
+    
+      .accordion-button:not(.collapsed) {
+        background-color: #AB7ED9; /* Açıkken farklı arka plan rengi */
+        color: white; /* Yazı rengini beyaz yapma */
+      }
+
+     .container {
+        flex: 1; /* İçeriği flex ile büyütüp footer'ın yukarı kaymasını engelliyoruz */
+        padding-bottom: 50px; /* Footer'ın üzerine içerik gelmesini engellemek için alt boşluk */
+        }
+
+        /* Buton için özel stil */
+        .btn-dynamic {
+            width: 250px;
+            height: 100px;
+            font-size: 16px;
+            transition: all 0.5s ease-in-out;
+        }
+    
+        .btn-modern {
+            background-color: #ffffff; /* Buton beyaz arka plan */
+            color: #333; /* Yazı rengi koyu gri */
+            padding: 12px 25px; /* Buton iç boşluk */
+            border: 1px solid #ddd; /* Hafif gri kenarlık */
+            border-radius: 8px; /* Köşeleri yuvarla */
+            font-size: 18px; /* Yazı boyutu */
+            font-family: Arial, sans-serif; /* Modern bir yazı tipi */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+            transition: all 0.3s ease; /* Hover geçiş efekti */
+           
+        }
+        .btn-modern:hover {
+            background-color: #7A4EA6; /* Hover için açık mavi arka plan */
+            border-color: #6351ce; /* Kenar rengini açık mavi yap */
+            color: #ffffff; /* Yazıyı koyu maviye çevir */
+            width: 260px;
+            height: 110px;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.40); /* Gölgeyi artır */
+        }
+        .btn-modern a {
+            text-decoration: none; /* Alt çizgiyi kaldırır */
+            color: inherit; /* Bağlantı rengini butondan almasını sağlar */
+            display: inline-block; /* Linkin buton gibi davranmasını sağlar */
+        }
+        .btn-modern:hover a {
+        color: #ffffff; /* Hover durumunda yazı rengini değiştirebilirsiniz */
+        }
+
+      </style>
+    </head>
+<body id="top" style="background-color: #ECE8E6;">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="resimler/logo-fotor-20241205172212.png" alt="Logo" width="80" height="80" class="me-2">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Anasayfa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="farkindalik.html">Eğitim ve Farkındalık</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="destek.html">Destek</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Arama Yap" aria-label="Search">
+              <button class="btn btn-light" type="submit">
+                  <i class="fas fa-search"></i>
+              </button>
+          </form>
+          </div>
+        </div>
+    </nav>
+   
+      <!--Başlık-->
+      <div class="container">
+        <div class="baslik" style="text-align: center; margin-bottom: 50px; margin-top: 50px;"><ins>Şiddete Karşı Destek ve Bilgilendirme</ins></div>
+      <!--1. Accordion-->
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              ŞİDDETE KARŞI HAKLAR
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body" style="opacity: 0.7; line-height: 2.5;">
+                <!--Accordion List Bölümü-->
+                <ul style="font-size: 1.2rem;">
+                    <li><strong>Eğer şiddete maruz kalırsanız unutmayın,</strong> 6284 Sayılı Kanun kapsamında şiddet uygulayanın evden uzaklaştırılmasını ve size yaklaşmasının engellenmesini isteyebilirsiniz. Size şiddet uygulayan kişiyi yaşadığınız ortak evden uzaklaştırabilir, evinize, iş yerinize, çocuğunuzun okuluna ve size yaklaşmasını engelleyebilirsiniz.</li>
+
+                    <li><strong>Eğer şiddet faili sizi silahla tehdit ederse unutmayın,</strong> 6284 Sayılı Kanun kapsamında şiddet failinin silahını polise teslim etmesini isteyebilirsiniz. Kişinin silahı ruhsatlı olsa da işi gereği (polis, asker, güvenlik görevlisi vb.) silah taşıyor olsa da kanun kapsamında silahını teslim etmek zorundadır.</li>
+
+                    <li><strong>Eğer şiddet faili uzaklaştırma kararına rağmen sizi telefon, mail, sosyal medya, üçüncü kişiler aracılığıyla iletişim kurmaya çalışma vb yöntemlerle rahatsız ediyorsa unutmayın,</strong> 6284 Sayılı Kanun kapsamında şiddet uygulayanın size ulaşmasının engellenmesini talep edebilirsiniz.</li>
+
+                    <li><strong>Eğer can güvenliğiniz tehdit altındaysa veya şiddet failinden kaçıyorsanız unutmayın,</strong> 6284 Sayılı Kanun kapsamında, Aile Mahkemesi hakiminden kimlik ve adres bilgilerinizin tüm resmi kayıtlardan gizlenmesini talep edebilirsiniz. Bu talebinizi başvurunuzda açıkça belirtmeniz gerekmektedir.</li>
+
+                    <li><strong>Eğer herhangi bir sağlık sigortasından yararlanamıyorsanız unutmayın,</strong>koruma kararı geçerli olduğu sürece sağlık hizmetlerinden ve ilaçlardan genel sağlık sigortası kapsamında yararlanabilirsiniz.</li>
+
+                    <li><strong>Eğer ortak yaşadığınız konutun eşiniz tarafından satılmasından endişe ediyorsanız unutmayın, </strong>tapu müdürlüğüne giderek aile konutu şerhi koydurabilirsiniz. Tapu müdürlüğü bu talebi işleme almazsa Aile Mahkemesinden aile konut şerhi konulmasını talep edebilirsiniz.</li>
+
+                    <li><strong>Eğer can güvenliği riskiniz varsa unutmayın, </strong>6284 Sayılı Kanun kapsamında size eşlik etmesi için bir polisin görevlendirilmesini isteyebilirsiniz.</li>
+
+                    <li><strong>Eğer güvenli bir yere ihtiyacınız varsa unutmayın, </strong>6284 Sayılı Kanun kapsamında en yakındaki karakola (varsa çocuğunuzla birlikte) giderek sığınak talebinde bulunabilirsiniz. Sığınaklar güvenliğiniz için yerleri gizli tutulan yerlerdir ve hiçbir kamu görevlisi bu bilgiyi üçüncü kişilerle paylaşamaz.</li>
+
+                    <li><strong>Şiddet failinin çocuklarınızı alacağından endişe ediyorsanız unutmayın,</strong>6284 sayılı Kanun kapsamında çocuklarınızın velayetini geçici olarak isteyebilir, kendiniz ve çocuklarınız için tedbir nafakası talep edebilirsiniz.</li>
+
+                </ul>
+            </div>
+          </div>
+        </div>
+        <!--2. Accordion-->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              SOSYO EKONOMİK HAKLAR
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"  style="opacity: 0.7; line-height: 2.5;">
+                <!--Accordion List-->
+                <ul style="font-size: 1.2rem;">
+                    <li><strong>Yoksulluk yaşıyorsanız ve temel ihtiyaçlarınızı karşılayamıyorsanız unutmayın,</strong> çocuklarınızın bakımı ve eğitim masrafları için Aile, Çalışma ve Sosyal Hizmetler Bakanlığı İl Müdürlükleri ve Sosyal Hizmet Merkezlerine başvuruda bulunabilirsiniz.</li>
+
+                    <li><strong>Eğer şiddet failinden uzaklaşmak ve çocuklarınızla birlikte ev tutmak istiyorsanız, ancak bütçeniz yoksa unutmayın,</strong> kira yardımı talep etmek için İlçe Kaymakamlığına bağlı Sosyal Yardımlaşma ve Dayanışma Vakfı ile Aile, Çalışma ve Sosyal Hizmetler Bakanlığı İl Müdürlüğüne başvuruda bulunabilirsiniz. Ayrıca yeni çıkacağınız eviniz için belediyelerden ve kaymakamlıklardan eşya talebinde de bulunabilirsiniz.</li>
+
+                    <li><strong>Ücretsiz avukat desteğine ihtiyacınız varsa unutmayın, 6284 Sayılı Kanun’a dayalı tedbitler, boşanma gibi hukuk davalarında</strong> bulunduğunuz ildeki Baro’nun Adli Yardım Bürosuna başvuruda bulunabilirsiniz.  Cinsel saldırı, öldürmeye teşebbüs vb. alt sınırı 5 yıldan fazla hapis cezasını gerektiren suçlar nedeniyle mağdur konumundaysanız, her aşamada bulunduğunuz ildeki Baro’nun Ceza Muhakemesi Kanunu (CMK) servisinden avukat görevlendirilmesini talep edebilirsiniz. size avukat görevlendirilmesini isteyebilirsiniz.</li>
+
+                    <li><strong>Eğer fiziksel ya da cinsel saldırıya maruz kaldıysanız unutmayın, </strong> bulunduğunuz ildeki Baro’nun Ceza Muhakemesi Kanunu (CMK) servisine ücretsiz avukat için başvuruda bulunabilirsiniz.</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--1. js bölümü-->
+      <div class="container mt-5 p-5" style="background-color: #c0a7fb7d; border-radius: 10px;">
+        <h2 class="text-center mb-4" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">	
+            7/24 ULAŞILABİLECEK KURUMLAR</h2><br><br>
+        <div class="row text-center">
+            <!-- Polis -->
+            <div class="col-md-4 mb-3">
+                <button 
+                    class="btn btn-modern btn-dynamic" 
+                    onmouseover="changeButtonText(this, '155')" 
+                    onmouseout="changeButtonText(this, 'Polis')">
+                    Polis
+                </button>
+            </div>
+            <!-- Jandarma -->
+            <div class="col-md-4 mb-3">
+                <button
+                    class="btn btn-modern btn-dynamic" 
+                    onmouseover="changeButtonText(this, '156')" 
+                    onmouseout="changeButtonText(this, 'Jandarma')">
+                    Jandarma
+                </button>
+            </div>
+            <!-- Yabancılar İletişim Merkezi -->
+            <div class="col-md-4 mb-3">
+                <button
+                    class="btn btn-modern btn-dynamic" 
+                    onmouseover="changeButtonText(this, '157')" 
+                    onmouseout="changeButtonText(this, 'Yabancılar İletişim Merkezi')">
+                    Yabancılar İletişim Merkezi
+                </button>
+            </div>
+            <!-- Ambulans -->
+            <div class="col-md-4 mb-3">
+                <button
+                    class="btn btn-modern btn-dynamic" 
+                    onmouseover="changeButtonText(this, '112')" 
+                    onmouseout="changeButtonText(this, 'Ambulans')">
+                    Ambulans
+                </button>
+            </div>
+            <!-- UNFPA KRG Hattı -->
+            <div class="col-md-4 mb-3">
+                <button
+                    class="btn btn-modern btn-dynamic" 
+                    onmouseover="changeButtonText(this, '0850 888 05 39')" 
+                    onmouseout="changeButtonText(this, 'UNFPA KRG Hattı')">
+                    UNFPA KRG Hattı
+                </button>
+            </div>
+            <!-- Sosyal Destek Hattı -->
+            <div class="col-md-4 mb-3">
+                <button
+                    class="btn btn-modern btn-dynamic" 
+                    onmouseover="changeButtonText(this, '183')" 
+                    onmouseout="changeButtonText(this, 'Sosyal Destek Hattı')">
+                    Sosyal Destek Hattı
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--2. js bölümü-->
+    <div class="container mt-5 p-5" style="background-color: #c0a7fb7d; border-radius: 10px;">
+        <h2 class="text-center mb-4" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">	
+            	MESAİ SAATLERİNDE ULAŞILABİLECEK KURUMLAR</h2><br><br>
+        <div class="row text-center">
+            <!-- Polis -->
+            <div class="col-md-4 mb-3">
+                <button 
+                    class="btn btn-modern btn-dynamic" 
+                    onmouseover="changeButtonText(this, '444 26 18')" 
+                    onmouseout="changeButtonText(this, 'Baro Kadın Hakları Merkezi')">
+                    Baro Kadın Hakları Merkezi
+                </button>
+            </div>
+           
+            <div class="col-md-4 mb-3">
+                <button
+                    class="btn btn-modern btn-dynamic" 
+                    onmouseover="changeButtonText(this, ' 0212 656 96 96')" 
+                    onmouseout="changeButtonText(this, 'TKDF Aile İçi Şiddet Acil Yardım Hattı')">
+                    TKDF Aile İçi Şiddet Acil Yardım Hattı
+                </button>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+                <button
+                    class="btn btn-modern btn-dynamic" 
+                    onmouseover="changeButtonText(this, '0212 292 52 31')" 
+                    onmouseout="changeButtonText(this, ' Mor Çatı Kadın Sığınağı Vakfı')">
+                    Mor Çatı Kadın Sığınağı Vakfı
+                </button>
+            </div>
+           
+            <div class="col-md-4 mb-3">
+                <button
+                    class="btn btn-modern btn-dynamic" 
+                    onmouseover="changeButtonText(this, '444 48 68')" 
+                    onmouseout="changeButtonText(this, ' UNHCR Counselling Line')">
+                    UNHCR Counselling Line
+                </button>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+                <button
+                    class="btn btn-modern btn-dynamic" 
+                    onmouseover="changeButtonText(this, '0546 478 69 17')" 
+                    onmouseout="changeButtonText(this, ' KADAV Danışma Hattı')">
+                    KADAV Danışma Hattı
+                </button>
+            </div>
+           
+            <div class="col-md-4 mb-3">
+                <button
+                    class="btn btn-modern btn-dynamic" 
+                    onmouseover="changeButtonText(this, '444 80 86')" 
+                    onmouseout="changeButtonText(this, ' İBB Kadın Destek Hattı')">
+                    İBB Kadın Destek Hattı
+                </button>
+            </div>
+        </div>  
+    </div>
+    <!--3. js kısmı-->
+    <div class="container mt-5 p-5" style="background-color: #c0a7fb7d; border-radius: 10px;">
+        <h2 class="text-center mb-4" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">	
+            MOBİL UYGULAMALAR</h2><br><br>
+        <div class="row text-center">
+           
+            <div class="col-md-4 mb-3">
+                <button 
+                    type="button" 
+                    class="btn btn-modern btn-dynamic" 
+                    onclick="window.location.href='https://play.google.com/store/apps/details?id=tr.gov.egm.kades&hl=tr&gl=US'" 
+                    onmouseover="changeButtonText(this, 'Mobil Uygulama')" 
+                    onmouseout="changeButtonText(this, 'KADES')">
+                    KADES
+                </button>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <button
+                    type="button" 
+                    class="btn btn-modern btn-dynamic" 
+                    onclick="window.location.href='https://play.google.com/store/apps/details?id=com.bos4apps.kirmiziisik&hl=tr&gl=US'" 
+                    onmouseover="changeButtonText(this, 'Mobil Uygulama')" 
+                    onmouseout="changeButtonText(this, 'Kırmızı Işık')">
+                   Kırmızı Işık
+                </button>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+                <button
+                type="button" 
+                class="btn btn-modern btn-dynamic" 
+                onclick="window.location.href='https://play.google.com/store/apps/details?id=org.rescue.rosa&hl=tr&gl=US'"
+                    onmouseover="changeButtonText(this, 'Mobil Uygulama')" 
+                    onmouseout="changeButtonText(this, 'ROSA Uygulaması')">
+                    ROSA Uygulaması
+                </button>
+            </div>
+        </div>
+    </div>
+      </div>
+      
+      <!--Footer-->
+      <footer
+        class="text-center text-lg-start text-white"
+        style="background-color: #1c2331; margin: 0; padding: 0; position: relative; width: 100%; left: 0; bottom: 0;">
+    <!-- Section: Social media -->
+    <section
+            class="d-flex justify-content-between p-4"
+            style="background-color: #733b8b; margin: 0;"
+            >
+        <!-- Left -->
+        <div class="me-5">
+            <span>Sosyal Medya Hesaplarımıza Buradan Ulaşabilirsiniz:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div class="social-icons">
+          <a href="" class="text-white me-2">
+              <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-2">
+              <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-2">
+              <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-2">
+              <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-2">
+              <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-2">
+              <i class="fab fa-github"></i>
+          </a>
+      </div>
+      
+        <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container-fluid text-center text-md-start mt-5" style="margin: 0; padding: 0;">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">Neden Cinsiyet Eşitliği?</h6>
+                  <hr
+                      class="mb-4 mt-0 d-inline-block mx-auto"
+                      style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+                  <p style="font-size: 18px;">
+                      <i>Toplumsal cinsiyet eşitliği, adil bir gelecek için vazgeçilmezdir. Kadınlar ve erkekler, eşit fırsatlara sahip olmalıdır.</i>
+                  </p>
+                  <a class="text-white" href="#top">Sayfanın Başına Dön</a><br>
+                  <a class="text-white" href="index.html">Anasayfaya Dön</a>
+              </div>
+              
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold">Linkler</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px"
+                    />
+                    <p>
+                        <a href="https://www.tog.org.tr/toplumsal-cinsiyet-esitligi" class="text-white">Toplum Gönüllüleri</a>
+                    </p>
+                    <p>
+                        <a href="https://www.kureselamaclar.org/amaclar/toplumsal-cinsiyet-esitligi/" class="text-white">Küresel Amaçlar</a>
+                    </p>
+                    <p>
+                        <a href="https://kadincinayetlerinidurduracagiz.net" class="text-white">Kadın Cinayetlerini Durduracağız Platformu</a>
+                    </p>
+                    <p>
+                        <a href="https://www.tihek.gov.tr" class="text-white">Türkiye İnsan Hakları ve Eşitlik Kurumu</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold">Linkler</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px"
+                        />
+                   
+                    <p>
+                        <a href="hakkimizda.html" class="text-white">Hakkımızda</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-white">Misyon ve Vizyon</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-white">Yardım ve Destek</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold">İLETİŞİM</h6>
+                    <hr
+                        class="mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #7c4dff; height: 2px"
+                        />
+                    <p><i class="fas fa-home mr-3"></i> İstanbul, Beşiktaş</p>
+                    <p><i class="fas fa-envelope mr-3"></i> info@esitlikicin.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> +90 540 00 00</p>
+                    <p><i class="fas fa-print mr-3"></i> +90 212 00 00</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+            class="text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2); margin: 0;"
+            >
+        © 2024 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">
+            esitlikicin.com</a
+            >
+    </div>
+    <!-- Copyright -->
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+<script>
+    // Butonun içeriğini değiştiren fonksiyon
+    function changeButtonText(button, text) {
+        button.textContent = text;
+    }
+    // Accordion'da her tıklamada açma/kapama işlemi
+    var myCollapse = document.getElementById('accordionFlushExample');
+    var bsCollapse = new bootstrap.Collapse(myCollapse, {
+    toggle: true
+    });
+
+</script>
+</body>
+</html>
